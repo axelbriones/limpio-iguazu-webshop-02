@@ -1,9 +1,6 @@
-
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
+  return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-corporate-blue via-blue-700 to-cyan-500"></div>
       
@@ -38,11 +35,7 @@ const Hero = () => {
                 <Button size="lg" className="bg-corporate-green hover:bg-green-600 text-white font-montserrat font-medium px-8 py-4">
                   Ver Más
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-corporate-blue font-montserrat font-medium px-8 py-4"
-                >
+                <Button size="lg" variant="outline" className="border-white hover:bg-white hover:text-corporate-blue font-montserrat font-medium px-8 py-4 text-indigo-700">
                   Contactar Ahora
                 </Button>
               </div>
@@ -53,11 +46,7 @@ const Hero = () => {
             <div className="relative">
               {/* Product showcase */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <img 
-                  src="/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png"
-                  alt="Productos de limpieza sustentables" 
-                  className="w-80 h-80 object-contain mx-auto"
-                />
+                <img src="/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png" alt="Productos de limpieza sustentables" className="w-80 h-80 object-contain mx-auto" />
               </div>
               
               {/* Floating elements */}
@@ -71,8 +60,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
