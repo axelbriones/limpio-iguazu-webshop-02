@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Shield, Sparkles, Leaf, Users } from "lucide-react";
+import { CheckCircle, Clock, Users } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -11,34 +11,16 @@ const Services = () => {
       features: ["Consultoría personalizada", "Análisis de necesidades", "Soporte continuo"]
     },
     {
-      icon: Shield,
-      title: "Calidad Garantizada",
-      description: "Productos de primera calidad con certificaciones internacionales que aseguran eficacia y seguridad.",
-      features: ["Marcas reconocidas", "Certificaciones de calidad", "Garantía de resultados"]
-    },
-    {
       icon: Clock,
       title: "Soluciones Inmediatas",
       description: "Entregas rápidas y stock permanente para resolver sus problemas de limpieza e higiene sin demoras.",
       features: ["Entrega el mismo día", "Stock permanente", "Logística eficiente"]
     },
     {
-      icon: Sparkles,
-      title: "Innovación Constante",
-      description: "Incorporamos las últimas tecnologías en limpieza, siempre con enfoque en la sustentabilidad.",
-      features: ["Productos innovadores", "Tecnología avanzada", "Actualización constante"]
-    },
-    {
-      icon: Leaf,
+      icon: CheckCircle,
       title: "Responsabilidad Ecológica",
       description: "Priorizamos productos sustentables y amigables con el medio ambiente, cuidando la selva misionera.",
       features: ["Productos eco-friendly", "Compromiso ambiental", "Sustentabilidad"]
-    },
-    {
-      icon: CheckCircle,
-      title: "Compromiso Total",
-      description: "15+ años comprometidos con brindar soluciones integrales en limpieza profesional y hogareña.",
-      features: ["Experiencia comprobada", "Compromiso a largo plazo", "Confianza establecida"]
     }
   ];
 
@@ -56,7 +38,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (

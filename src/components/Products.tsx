@@ -1,7 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Droplets, Building2, Home, Sparkles } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Droplets, Building2, Home, Sparkles, CheckCircle, Users } from "lucide-react";
 
 const Products = () => {
   const productCategories = [
@@ -9,64 +10,118 @@ const Products = () => {
       title: "Limpieza Institucional",
       description: "Productos profesionales para empresas, instituciones y comercios",
       icon: Building2,
+      color: "bg-corporate-blue",
       items: [
         "Desinfectantes industriales",
         "Detergentes de alto rendimiento", 
         "Sistemas de limpieza profesional",
         "Productos especializados por sector"
-      ],
-      color: "bg-corporate-blue",
-      image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ]
     },
     {
       title: "Higiene Institucional", 
       description: "Soluciones completas para mantener la higiene en espacios comerciales",
       icon: Droplets,
+      color: "bg-corporate-green",
       items: [
         "Productos de higiene personal",
         "Dispensadores y accesorios",
         "Papel higiénico y toallas",
         "Jabones y gel antibacterial"
-      ],
-      color: "bg-corporate-green",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ]
     },
     {
       title: "Limpieza Hogareña",
       description: "Todo lo que necesita para mantener su hogar impecable",
       icon: Home,
+      color: "bg-blue-600",
       items: [
         "Detergentes para ropa",
         "Productos multipropósito",
         "Limpiadores especializados",
         "Accesorios de limpieza"
-      ],
-      color: "bg-blue-600",
-      image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ]
+    },
+    {
+      title: "Productos Eco-Friendly",
+      description: "Línea sustentable para cuidar el medio ambiente",
+      icon: Sparkles,
+      color: "bg-green-600",
+      items: [
+        "Detergentes biodegradables",
+        "Limpiadores naturales",
+        "Productos sin químicos",
+        "Envases reciclables"
+      ]
+    },
+    {
+      title: "Equipos y Accesorios",
+      description: "Herramientas profesionales para limpieza",
+      icon: CheckCircle,
+      color: "bg-gray-600",
+      items: [
+        "Máquinas de limpieza",
+        "Aspiradoras industriales",
+        "Herramientas de limpieza",
+        "Accesorios profesionales"
+      ]
+    },
+    {
+      title: "Servicios Especializados",
+      description: "Asesoramiento y servicios personalizados",
+      icon: Users,
+      color: "bg-purple-600",
+      items: [
+        "Asesoramiento técnico",
+        "Capacitación en productos",
+        "Servicios de instalación",
+        "Mantenimiento preventivo"
+      ]
     }
   ];
 
   const featuredProducts = [
     {
-      name: "Desinfectante Multiusos",
-      category: "Institucional",
+      name: "Jabón Líquido Baja Espuma",
+      category: "Limpieza Profesional",
+      description: "FELIPRO - Aromas de Misiones",
+      image: "/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png",
+      features: ["Uso profesional", "Baja espuma", "Limpieza profunda"]
+    },
+    {
+      name: "Desinfectante Industrial",
+      category: "Higiene",
       description: "Elimina 99.9% de virus y bacterias",
-      image: "https://images.unsplash.com/photo-1585435557343-3b092031d8fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      image: "/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png",
       features: ["Acción rápida", "Sin residuos", "Eco-friendly"]
     },
     {
+      name: "Detergente Concentrado",
+      category: "Hogar",
+      description: "Máxima eficacia en el lavado familiar",
+      image: "/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png",
+      features: ["Concentrado", "Suave con las telas", "Fragancia duradera"]
+    },
+    {
+      name: "Limpiador Multiusos Eco",
+      category: "Sustentable",
+      description: "Producto biodegradable para uso general",
+      image: "/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png",
+      features: ["100% natural", "Biodegradable", "Sin químicos"]
+    },
+    {
       name: "Kit Higiene Completo",
-      category: "Higiene",
+      category: "Institucional",
       description: "Solución integral para baños comerciales",
-      image: "https://images.unsplash.com/photo-1556909114-7a4e5c9b9b9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      image: "/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png",
       features: ["Dispensadores incluidos", "Refills económicos", "Instalación gratis"]
     },
     {
-      name: "Detergente Premium",
-      category: "Hogar",
-      description: "Máxima eficacia en el lavado familiar",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c5d1d1f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      features: ["Concentrado", "Suave con las telas", "Fragancia duradera"]
+      name: "Aspiradora Industrial",
+      category: "Equipos",
+      description: "Para limpieza profunda en espacios grandes",
+      image: "/lovable-uploads/a0c967e0-4070-4214-a8ac-86b3702c6c80.png",
+      features: ["Alta potencia", "Tanque grande", "Filtro HEPA"]
     }
   ];
 
@@ -84,74 +139,82 @@ const Products = () => {
           </p>
         </div>
 
-        {/* Categorías principales */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {productCategories.map((category, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={category.image} 
-                  alt={category.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className={`absolute inset-0 ${category.color} bg-opacity-80 flex items-center justify-center`}>
-                  <div className="text-center text-white">
-                    <category.icon className="w-12 h-12 mx-auto mb-2" />
-                    <h3 className="font-montserrat font-semibold text-xl">{category.title}</h3>
-                  </div>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <p className="font-opensans text-gray-600 mb-4">
-                  {category.description}
-                </p>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start">
-                      <div className="w-2 h-2 bg-corporate-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="font-opensans text-gray-700 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Categorías principales en slider */}
+        <div className="mb-16">
+          <h3 className="font-montserrat font-semibold text-2xl text-corporate-blue mb-8 text-center">
+            Categorías Principales
+          </h3>
+          <Carousel className="w-full">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {productCategories.map((category, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group h-full">
+                    <div className={`${category.color} p-6 text-white text-center`}>
+                      <category.icon className="w-12 h-12 mx-auto mb-2" />
+                      <h4 className="font-montserrat font-semibold text-lg">{category.title}</h4>
+                    </div>
+                    <CardContent className="p-6">
+                      <p className="font-opensans text-gray-600 mb-4 text-sm">
+                        {category.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {category.items.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start">
+                            <div className="w-2 h-2 bg-corporate-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span className="font-opensans text-gray-700 text-sm">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
-        {/* Productos destacados */}
-        <div className="bg-white rounded-2xl p-8 mb-12">
+        {/* Productos destacados en slider */}
+        <div className="mb-12">
           <h3 className="font-montserrat font-semibold text-2xl text-corporate-blue mb-8 text-center">
             Productos Destacados
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {featuredProducts.map((product, index) => (
-              <div key={index} className="bg-corporate-gray rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="w-full h-32 bg-white rounded-lg mb-4 overflow-hidden">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <span className="inline-block bg-corporate-green text-white text-xs px-2 py-1 rounded mb-2">
-                  {product.category}
-                </span>
-                <h4 className="font-montserrat font-medium text-lg text-corporate-blue mb-2">
-                  {product.name}
-                </h4>
-                <p className="font-opensans text-gray-600 text-sm mb-3">
-                  {product.description}
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {product.features.map((feature, featureIndex) => (
-                    <span key={featureIndex} className="bg-blue-100 text-corporate-blue text-xs px-2 py-1 rounded">
-                      {feature}
+          <Carousel className="w-full">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {featuredProducts.map((product, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow h-full">
+                    <div className="w-full h-48 bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span className="inline-block bg-corporate-green text-white text-xs px-2 py-1 rounded mb-2">
+                      {product.category}
                     </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+                    <h4 className="font-montserrat font-medium text-lg text-corporate-blue mb-2">
+                      {product.name}
+                    </h4>
+                    <p className="font-opensans text-gray-600 text-sm mb-3">
+                      {product.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1">
+                      {product.features.map((feature, featureIndex) => (
+                        <span key={featureIndex} className="bg-blue-100 text-corporate-blue text-xs px-2 py-1 rounded">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* Call to action */}
