@@ -4,16 +4,28 @@ import { CheckCircle, Clock, Shield, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="bg-gradient-to-br from-corporate-blue to-blue-700 text-white py-20">
-      <div className="container mx-auto px-4">
+    <section id="inicio" className="relative min-h-screen flex items-center">
+      {/* Imagen de fondo */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
+        }}
+      />
+      
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      
+      {/* Contenido */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in">
+          <div className="animate-fade-in text-white">
             <h1 className="font-montserrat font-bold text-4xl lg:text-6xl mb-6 leading-tight">
               Soluciones Profesionales en
               <span className="text-corporate-green"> Limpieza e Higiene</span>
             </h1>
             
-            <p className="font-opensans text-xl mb-8 text-blue-100 leading-relaxed">
+            <p className="font-opensans text-xl mb-8 text-gray-200 leading-relaxed">
               Distribuidores especializados con <strong>asesoramiento experto</strong> y 
               <strong> entregas inmediatas</strong> en Iguazú. Cubrimos todas sus necesidades 
               institucionales y hogareñas.
@@ -53,7 +65,7 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-white rounded-2xl p-8 shadow-2xl">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
               <div className="text-center">
                 <div className="w-16 h-16 bg-corporate-green rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-white" />
