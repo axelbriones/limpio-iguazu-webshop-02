@@ -26,7 +26,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#2A5CAA',
+					DEFAULT: '#0064b6',
 					foreground: '#FFFFFF'
 				},
 				secondary: {
@@ -63,9 +63,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Colores corporativos de Mundo Limpio Iguazú
-				'corporate-blue': '#2A5CAA',
-				'corporate-green': '#4CAF50',
+				// Colores corporativos de Mundo Limpio Iguazú actualizados
+				'corporate-blue': '#0064b6',
+				'corporate-green': '#4caf50',
 				'corporate-white': '#FFFFFF',
 				'corporate-gray': '#F5F5F5',
 			},
