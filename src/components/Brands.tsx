@@ -1,33 +1,37 @@
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
 
 const Brands = () => {
   const brands = [
     {
       name: "Elite Professional",
       url: "https://eliteprofessional.com.ar",
-      logo: "https://via.placeholder.com/150x80/0064b6/ffffff?text=Elite+Professional"
+      logo: "https://www.eliteprofessional.com.ar/assets/dist/frontend/images/elite-logo.png"
     },
     {
       name: "Casa Thames",
       url: "https://casathames.com",
-      logo: "https://via.placeholder.com/150x80/4caf50/ffffff?text=Casa+Thames"
+      logo: "https://www.casathames.com/images/logo.gif"
     },
     {
       name: "Cahesa",
       url: "https://cahesa.com.ar",
-      logo: "https://via.placeholder.com/150x80/0064b6/ffffff?text=Cahesa"
+      logo: "https://cahesa.com.ar/images/logo-cahesa.png"
     },
     {
       name: "Wassington",
       url: "https://wassington.com.ar",
-      logo: "https://via.placeholder.com/150x80/4caf50/ffffff?text=Wassington"
+      logo: "https://wassington.com.ar/wp-content/uploads/2024/03/Logo-Wassington-Corporativo_Black.png"
     },
     {
-      name: "Mundo Limpio",
-      url: "#",
-      logo: "https://via.placeholder.com/150x80/0064b6/ffffff?text=Mundo+Limpio"
+      name: "Vulcano",
+      url: "https://vulcano-sa.com.ar",
+      logo: "https://vulcano-sa.com.ar/wp-content/uploads/2024/01/logo-VULCANO-50-ANOS-e1709234751800-150x65.png"
+    },
+    {
+      name: "Nataclor",
+      url: "https://nataclor.com.ar",
+      logo: "https://www.nataclor.com.ar/cdn/shop/files/Nataclor_celeste.png?v=1724255942&width=280"
     }
   ];
 
@@ -47,7 +51,7 @@ const Brands = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <div className="flex animate-[scroll_20s_linear_infinite] hover:pause">
+          <div className="flex animate-scroll hover:pause">
             {duplicatedBrands.map((brand, index) => (
               <div
                 key={index}
@@ -72,25 +76,6 @@ const Brands = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-${100 / 3}%);
-          }
-        }
-        
-        .animate-scroll {
-          animation: scroll 20s linear infinite;
-        }
-        
-        .hover\\:pause:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };

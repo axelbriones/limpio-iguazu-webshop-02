@@ -1,5 +1,5 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Droplets, Building2, Home, Sparkles, CheckCircle, Users } from "lucide-react";
@@ -139,7 +139,7 @@ const Products = () => {
           </p>
         </div>
 
-        {/* Categorías principales en slider */}
+        {/* Categorías principales en slider - 6 categorías */}
         <div className="mb-16">
           <h3 className="font-montserrat font-semibold text-2xl text-corporate-blue mb-8 text-center">
             Categorías Principales
@@ -175,7 +175,7 @@ const Products = () => {
           </Carousel>
         </div>
 
-        {/* Productos destacados en slider */}
+        {/* Productos destacados en slider - 6 productos */}
         <div className="mb-12">
           <h3 className="font-montserrat font-semibold text-2xl text-corporate-blue mb-8 text-center">
             Productos Destacados
