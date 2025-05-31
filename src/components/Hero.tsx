@@ -53,9 +53,7 @@ const Hero = () => {
               <div className="absolute -top-4 -right-4 bg-corporate-green text-white px-4 py-2 rounded-full text-sm font-montserrat font-medium">
                 Eco-Friendly
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white text-corporate-blue px-4 py-2 rounded-full text-sm font-montserrat font-medium">
-                Desde 2008
-              </div>
+              
             </div>
           </div>
         </div>
